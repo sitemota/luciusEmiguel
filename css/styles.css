@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #f9bd4e;
+    color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+header p{
+    color: #ddd;
+    font-size: 2rem;
+}
+
+header h1{
+    font-size: 50px;
+}
+
+.title{
+    text-align: center;
+    margin: 30px;
+    font-size: 2rem;
+    color: #f6ab1f;
+}
+
+section{
+    width: 90%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 5px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 5px;
+    grid-template-areas: "foto1 foto2 foto2 foto3"
+    "foto1 foto4 foto4 foto4"
+    "foto5 foto6 foto7 foto7"
+    "foto8 foto6 foto9 foto9";
+}
+
+.foto{
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.foto-1{
+    grid-area: foto1;
+    background-image: url(../assets/luciusnovolante.jpg);
+    background-size: cover;
+    background-position: center left 90%;
+}
+.foto-2{
+    grid-area: foto2;
+    background-image: url(../assets/nicolascomunhao.jpg);
+    background-size: cover;
+    background-position: center 25%;
+}   
+.foto-3{
+    grid-area: foto3;
+    background-image: url(../assets/luciusesamael.jpg);
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+}
+.foto-4{
+    grid-area: foto4;
+    background-image: url(../assets/luciusesamael.jpg);
+    background-size: cover;
+    background-position: center 30%;
+}
+.foto-5{
+    grid-area: foto5;
+    background-image: url(../assets/luciuseoavo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.foto-6{
+    grid-area: foto6; 
+    background-image: url(../assets/lucios\ 600.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+
+}
+.foto-7{
+    grid-area: foto7;
+    background-image: url(../assets/samael1.jpg);
+    background-position: center 20%;
+    background-size: cover;
+}
+.foto-8{
+    grid-area: foto8;
+    background-image: url(../assets/Samael.jpg);
+    background-size: 90%;
+    background-position: center;
+}
+.foto-9{
+    grid-area: foto9;
+    background-image: url(../assets/samaeleaavo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 28%;
+}
+
+@media(max-width: 650px){
+   section{
+    width: auto; 
+
+    grid-template-rows: 2fr 2fr 1fr 2fr 2fr 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
+
+    grid-template-areas: 
+    "foto1 foto2"
+    "foto1 foto4"
+    "foto1 foto3"
+    "foto5 foto3"
+    "foto8 foto3"
+    "foto8 foto7"
+    "foto6 foto7"
+    "foto6 foto9"
+    "foto6 foto9";
+}
+
+header h1{
+    font-size: 1.5rem;
+}
+
+ .title{
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+header p{
+    font-size: 1.8rem;
+}
+}
